@@ -1,28 +1,99 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderComp
+      :headerInfo="headerInfo"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComp from './components/HeaderComp.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeaderComp
+  },
+  data(){
+    return{
+      headerInfo: {
+        menuOptions: [
+          {
+            name: "Home",
+            href: "#"
+          },
+          {
+            name: "Pages",
+            href: "#"
+          },
+          {
+            name: "Courses",
+            href: "#"
+          },
+          {
+            name: "Features",
+            href: "#"
+          },
+          {
+            name: "Blog",
+            href: "#"
+          },
+          {
+            name: "Shop",
+            href: "#"
+          }
+        ],
+        socialClasses: [
+          {
+            name: "fa-brands fa-twitter",
+            href: "#"
+          },
+          {
+            name: "fa-brands fa-facebook-f",
+            href: "#"
+          },
+          {
+            name: "fa-brands fa-instagram",
+            href: "#"
+          },
+          {
+            name: "fa-brands fa-linkedin",
+            href: "#"
+          }
+        ],
+        sideTools: [
+          {
+            name: "fa-solid fa-ruler",
+            href: "#"
+          },
+          {
+            name: "fa-solid fa-life-ring",
+            href: "#"
+          },
+          {
+            name: "fa-solid fa-book",
+            href: "#"
+          },
+          {
+            name: "fa-solid fa-cart-shopping",
+            href: "#"
+          }
+        ],
+        buttonInfo: {
+          name: "Get Started for free",
+          href: "#",
+          arrow: true
+        }
+      }
+    }
   }
 }
 </script>
 
 <style lang="scss">
+@import "./assets/style/vars";
+@import "./assets/style/general";
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
 }
 </style>
