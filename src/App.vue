@@ -310,6 +310,9 @@ export default {
           ],
           viewMoreHref: "#"
         }, 
+      },
+      footerInfo: {
+        
       }
     }
   }
