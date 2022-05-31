@@ -14,6 +14,10 @@
               <a :href="listElement.href">{{listElement.name}}</a></li>
           </ul>
         </div>
+        <ul class="socials">
+          <li v-for="(social, index) in footerInfo.socialClasses"
+          :key="`socialsFooter-${index}`"><a :href="social.href"><i :class="social.name"></i></a></li>
+        </ul>
       </div>
       <div class="right-half">
         <div
@@ -37,7 +41,7 @@
 export default {
   name: "FooterComp",
   props: {
-    footerInfo: Object
+    footerInfo: Object,
   }
 }
 </script>
@@ -51,11 +55,16 @@ footer{
     padding-top: 66px;
     .left-half,
     .right-half{
-      display: flex;
       width: 50%;
     }
+    .right-half{
+      display: flex;
+    }
+    a{
+      color: #bbbcbd;
+    }
     .footer-links{
-      margin-right: 67px;
+      margin: 0 67px 30px 0;
       h4{
         color: white;
         font-size: 17px;
@@ -68,10 +77,11 @@ footer{
           display: block;
           margin: 14px 0 0px 0;
         }
-        a{
-          color: #bbbcbd;
-        }
       }
+    }
+    .socials a{
+      font-size: 24px;
+      margin-right: 31px;
     }
   }
 }

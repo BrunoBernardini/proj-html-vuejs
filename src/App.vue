@@ -389,7 +389,25 @@ export default {
               ]
             }
           ],
-        }
+        },
+        socialClasses: [
+          {
+            name: "fa-brands fa-facebook-square",
+            href: "#"
+          },
+          {
+            name: "fa-brands fa-twitter",
+            href: "#"
+          },
+          {
+            name: "fa-brands fa-instagram",
+            href: "#"
+          },
+          {
+            name: "fa-brands fa-linkedin",
+            href: "#"
+          }
+        ],
       }
     }
   }
