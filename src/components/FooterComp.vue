@@ -35,6 +35,7 @@
       </div>
     </section>
     <span class="under-footer">&copy; 2020 Maxcoach. All rights Reserved</span>
+    <a href="#" class="back-btn"><i class="fa-solid fa-arrow-up-long"></i></a>
   </footer>
 </template>
 
@@ -48,7 +49,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/vars";
+
 footer{
+  position: relative;
   min-height: 405px;
   background-color: #171520;
   .content{
@@ -92,6 +96,19 @@ footer{
     display: block;
     font-size: 14px;
     text-align: center;
+  }
+  .back-btn{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $main-color;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>
