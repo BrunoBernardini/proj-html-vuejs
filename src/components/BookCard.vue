@@ -3,10 +3,12 @@
     <div class="book-img">
       <img :src="getImgUrl(bookInfo.img)" alt="">
       <div class="card-menu">
-        <a href="#" class="menu-option"><i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="#" class="menu-option"><i class="fa-solid fa-cart-shopping"></i></a>
-        <a href="#" class="menu-option"><i class="fa-solid fa-heart"></i></a>
-        <a href="#" class="menu-option"><i class="fa-solid fa-chart-column"></i></a>
+        <a 
+          v-for="(bookMenuOption, index) in bookMenuOptions"
+          :key="`bookMenuOption-${index}`"
+          :href="bookMenuOption.href"
+          class="menu-option"><i :class="bookMenuOption.name"></i>
+        </a>
       </div>
     </div>
     <h3>{{bookInfo.title}} by {{bookInfo.author}}</h3>
@@ -18,7 +20,8 @@
 export default {
   name: "BookCard",
   props: {
-    bookInfo: Object
+    bookInfo: Object,
+    bookMenuOptions: Array
   },
   methods: {
     getImgUrl(img){

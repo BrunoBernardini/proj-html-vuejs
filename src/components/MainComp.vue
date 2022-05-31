@@ -56,9 +56,10 @@
 
         <div class="books-box">
           <BookCard
-            v-for="(bookCard, index) in mainInfo.booksInfo.booksCard"
+            v-for="(bookCard, index) in mainInfo.booksInfo.booksCards"
             :key="`bookCard-${index}`"
-            :bookInfo="bookCard"/>
+            :bookInfo="bookCard"
+            :bookMenuOptions="mainInfo.booksInfo.bookMenuOptions"/>
         </div>
       </section>
     </div>

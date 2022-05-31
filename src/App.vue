@@ -178,7 +178,7 @@ export default {
             href: "#",
             arrow: false
           },
-          booksCard: [
+          booksCards: [
             {
               img: "product-book-11-400x400.jpg",
               href: "#",
@@ -193,7 +193,25 @@ export default {
               author: "Maxcoach",
               price: 39
             }
-          ]
+          ],
+          bookMenuOptions: [
+            {
+              name: "fa-solid fa-magnifying-glass",
+              href: "#"
+            },
+            {
+              name: "fa-solid fa-cart-shopping",
+              href: "#"
+            },
+            {
+              name: "fa-solid fa-heart",
+              href: "#"
+            },
+            {
+              name: "fa-solid fa-chart-column",
+              href: "#"
+            }
+          ],
         }
       }
     }
