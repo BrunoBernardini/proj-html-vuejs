@@ -20,10 +20,11 @@
           </li>
         </ul>
       </div>
+      
       <div class="jumbotron">
         <div class="left-jumbo">
           <h6>I'M WINGMAN</h6>
-          <h1>Peace On Earth A Wonderful Wish But No Way</h1>
+          <h1 class="title">Peace On Earth A Wonderful Wish But No Way</h1>
           <p>Success isn't overnight. It's when everyday you get a little better than the day before. It all adds up.</p>
           <ButtonComp :buttonInfo="headerInfo.buttonInfo"/>
         </div>
@@ -58,12 +59,13 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style/vars";
+
 header{
   position: relative;
-  // min-height: 790px;
   background-image: $background-pattern-wavify;
   background-color: #f7f7fd; 
   font-size: 15px;
+  margin-bottom: 123px;
   overflow: hidden;
   .top-header{
     display: flex;

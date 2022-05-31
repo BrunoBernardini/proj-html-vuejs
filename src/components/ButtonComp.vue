@@ -16,8 +16,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/vars";
+
 button{
-  background-color: #20ac97;
+  background-color: $main-color;
   transition: all .15s;
   border: none;
   font-weight: bold;
@@ -31,7 +33,7 @@ button{
     margin-left: 10px;
   }
   &:hover{
-    background-color: #3f3a64;
+    background-color: $secondary-color;
   }
 }
 </style>
