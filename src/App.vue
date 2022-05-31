@@ -2,7 +2,7 @@
   <div id="app">
     <HeaderComp :headerInfo="headerInfo"/>
     <MainComp :mainInfo="mainInfo"/>
-    <FooterComp/>
+    <FooterComp :footerInfo="footerInfo"/>
   </div>
 </template>
 
@@ -312,7 +312,84 @@ export default {
         }, 
       },
       footerInfo: {
-        
+        lists: {
+          leftHalf: [
+            {
+              listTitle: "Address",
+              listOptions: [
+                {
+                  name: "382 NE 191st St # 87394 Miami, FL 33179-3899",
+                  href: "#"
+                },
+                {
+                  name: "+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)",
+                  href: "#"
+                },
+                {
+                  name: "support@maxcoach.com",
+                  href: "#"
+                },
+              ]
+            }
+          ],
+          rightHalf: [
+            {
+              listTitle: "Explore",
+              listOptions: [
+                {
+                  name: "Start here",
+                  href: "#"
+                },
+                {
+                  name: "Blog",
+                  href: "#"
+                },
+                {
+                  name: "About us",
+                  href: "#"
+                },
+              ]
+            },
+            {
+              listTitle: "",
+              listOptions: [
+                {
+                  name: "Success story",
+                  href: "#"
+                },
+                {
+                  name: "Courses",
+                  href: "#"
+                },
+                {
+                  name: "Contact us",
+                  href: "#"
+                },
+              ]
+            },
+            {
+              listTitle: "Information",
+              listOptions: [
+                {
+                  name: "Membership",
+                  href: "#"
+                },
+                {
+                  name: "Purchase guide",
+                  href: "#"
+                },
+                {
+                  name: "Privacy policy",
+                  href: "#"
+                },
+                {
+                  name: "Terms of service",
+                  href: "#"
+                },
+              ]
+            }
+          ],
+        }
       }
     }
   }
