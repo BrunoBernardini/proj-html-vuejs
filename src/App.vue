@@ -114,6 +114,86 @@ export default {
           personName: "Kaixa Stark",
           personRole: "wingman",
           href: "#"
+        },
+        coursesInfo: {
+          coursesCards: [
+            {
+              img: "motivation-course-06-480x298.jpg",
+              price: 30,
+              title: "How to be Successful: Create A Growth Mindset For Success",
+              lessons: 3,
+              students: 50
+            },
+            {
+              img: "motivation-course-05-480x298.jpg",
+              price: 30,
+              title: "How to Build Confidence in Your Abilities",
+              lessons: 1,
+              students: 50
+            },
+            {
+              img: "motivation-course-04-480x298.jpg",
+              price: 20,
+              title: "Productivity Machine - Focus in a Distracted World",
+              lessons: 5,
+              students: 50
+            },
+            {
+              img: "motivation-course-03-480x298.jpg",
+              price: 20,
+              title: "Effective Time Management Mastery - Complete Guide",
+              lessons: 18,
+              students: 50
+            },
+            {
+              img: "motivation-course-02-480x298.jpg",
+              price: 25.99,
+              title: "Body Language Secrets for Entrepreneurs",
+              lessons: 19,
+              students: 50
+            },
+            {
+              img: "motivation-course-01-480x298.jpg",
+              price: 19.99,
+              title: "Management Skills: The Science of Leadership",
+              lessons: 17,
+              students: 50
+            }
+          ],
+          buttonInfo: {
+            name: "View all courses",
+            href: "#",
+            arrow: true
+          }
+        },
+        booksInfo: {
+          checkList: [
+            "Help you understand yourself better",
+            "Revealing mature tips",
+            "Give the right advice",
+            "Fascinating examples of alpha man"
+          ],
+          buttonInfo: {
+            name: "Get Free Ebook",
+            href: "#",
+            arrow: false
+          },
+          booksCard: [
+            {
+              img: "product-book-11-400x400.jpg",
+              href: "#",
+              title: "Alpha man",
+              author: "Maxcoach",
+              price: 29
+            },
+            {
+              img: "product-book-10-400x400.jpg",
+              href: "#",
+              title: "Real man 4.0",
+              author: "Maxcoach",
+              price: 39
+            }
+          ]
         }
       }
     }
@@ -122,7 +202,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/style/vars";
+@import "./assets/style/vars"; 
 @import "./assets/style/general";
 
 #app {

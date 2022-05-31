@@ -1,7 +1,7 @@
 <template>
   <section class="yt-video">
     <div class="yt-thumb">
-      <img :src="getThumbUrl(videoInfo.img)" alt="Video">
+      <img :src="getImgUrl(videoInfo.img)" alt="Video">
       <a
         :href="videoInfo.href"
         class="yt-logo">
@@ -25,7 +25,7 @@ export default {
     videoInfo: Object,
   },
   methods: {
-    getThumbUrl(img){
+    getImgUrl(img){
       return require("../assets/img/"+img);
     }
   }
@@ -44,7 +44,7 @@ export default {
     border-radius: 5px;
     overflow: hidden;
     height: max-content;
-    box-shadow: 0 5px 16px 1px grey;
+    box-shadow: 0 5px 16px 1px lightgray;
     .yt-logo{
       position: absolute;
       top: 50%;

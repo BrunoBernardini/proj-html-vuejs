@@ -30,6 +30,36 @@
       <section class="courses">
         <p>begin your journey at maxcoach</p>
         <h1 class="title">Latest <span class="highlight">Online Courses</span></h1>
+        <div class="course-cards-container">
+          <CourseCard
+            v-for="(courseInfo, index) in mainInfo.coursesInfo.coursesCards"
+            :key="`courseInfo-${index}`"
+            :courseInfo="courseInfo"/>
+        </div>
+        <ButtonComp :buttonInfo="mainInfo.coursesInfo.buttonInfo"/>
+      </section>
+
+      <section class="books">
+        <div class="text-box">
+          <span class="upper-text">book store online</span>
+          <h1 class="title">Be Alpha With <span class="highlight">Wingman's Book</span></h1>
+          <ul class="fa-ul">
+            <li 
+              v-for="(checkOption, index) in mainInfo.booksInfo.checkList"
+              :key="`checkOption-${index}`">
+              <span class="fa-li"><i class="fa-solid fa-check"></i></span>
+              <span class="list-el">{{checkOption}}</span>
+            </li>
+          </ul>
+          <ButtonComp :buttonInfo="mainInfo.booksInfo.buttonInfo"/>
+        </div>
+
+        <div class="books-box">
+          <BookCard
+            v-for="(bookCard, index) in mainInfo.booksInfo.booksCard"
+            :key="`bookCard-${index}`"
+            :bookInfo="bookCard"/>
+        </div>
       </section>
     </div>
   </main>
@@ -37,14 +67,20 @@
 
 <script>
 import YoutubeVideoSection from './YoutubeVideoSection.vue';
+import CourseCard from './CourseCard.vue';
+import ButtonComp from './ButtonComp.vue';
+import BookCard from './BookCard.vue';
 export default {
   name: "MainComp",
   props: {
     mainInfo: Object,
   },
   components: {
-    YoutubeVideoSection
-  }
+    YoutubeVideoSection,
+    CourseCard,
+    ButtonComp,
+    BookCard
+}
 }
 </script>
 
@@ -116,6 +152,7 @@ main{
   }
   .courses{
     text-align: center;
+    margin-bottom: 108px;
     p{
       text-transform: uppercase;
       font-size: 14px;
@@ -125,6 +162,49 @@ main{
       font-size: 49px;
       color: $secondary-color;
       margin-bottom: 68px;
+    }
+    .course-cards-container{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 36px;
+    }
+  }
+  .books{
+    display: flex;
+    justify-content: space-between;
+    .text-box{
+      width: 310px;
+      .upper-text{
+        display: block;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-bottom: 13px;
+      }
+      h1{
+        color: $secondary-color;
+        line-height: 60px;
+        margin-bottom: 29px;
+      }
+      .fa-ul {
+        margin: 0 0 42px 30px;
+        li{
+          display: block;
+          color: gray;
+          margin-bottom: 11px;
+        }
+        i{
+          color: $main-color;
+        }
+        .list-el{
+          font-size: 14px;
+        }
+      }
+    }
+    .books-box{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
     }
   }
 }
