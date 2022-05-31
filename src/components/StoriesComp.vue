@@ -66,6 +66,7 @@ export default {
   display: flex;
   position: relative;
   overflow: hidden;
+  margin-bottom: 147px;
   .text-box,
   .img-box{
     width: 50%;

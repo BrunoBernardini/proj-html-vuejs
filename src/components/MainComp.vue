@@ -76,6 +76,22 @@
     </section>
 
     <StoriesComp :storiesInfo="mainInfo.storiesInfo"/>
+
+    <section class="container">
+      <section class="blog">
+        <span class="upper-text">BLOG UPDATED</span>
+        <h1 class="title">Interesting <span class="highlight">articles updated</span> daily</h1>
+        <div class="articles-container">
+          <ArticleCard
+            v-for="(articleInfo, index) in mainInfo.articlesInfo.articleCards"
+            :key="`articleInfo-${index}`"
+            :articleInfo="articleInfo"/>
+        </div>
+        <a
+          :href="mainInfo.articlesInfo.viewMoreHref"
+          class="highlight">View all posts</a>
+      </section>
+    </section>
   </main>
 </template>
 
@@ -85,6 +101,8 @@ import CourseCard from './CourseCard.vue';
 import ButtonComp from './ButtonComp.vue';
 import BookCard from './BookCard.vue';
 import StoriesComp from './StoriesComp.vue';
+import ArticleCard from './ArticleCard.vue';
+
 export default {
   name: "MainComp",
   props: {
@@ -95,8 +113,9 @@ export default {
     CourseCard,
     ButtonComp,
     BookCard,
-    StoriesComp
-  },
+    StoriesComp,
+    ArticleCard
+},
   methods: {
     getImgUrl(img){
       return require("../assets/img/"+img);
@@ -235,6 +254,33 @@ main{
     align-items: center;
     filter: brightness(0) saturate(100%) invert(100%) sepia(55%) saturate(295%) hue-rotate(140deg) brightness(93%) contrast(84%);
     margin-bottom: 150px;
+  }
+  .blog{
+    .upper-text{
+      display: block;
+      font-size: 14px;
+      margin-bottom: 19px;
+    }
+    h1{
+      margin-bottom: 64px;
+    }
+    .articles-container{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    a{
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: underline;
+      font-size: 13px;
+      font-weight: bold;
+      text-underline-offset: 7px;
+      margin-bottom: 147px;
+    }
   }
 }
 </style>
