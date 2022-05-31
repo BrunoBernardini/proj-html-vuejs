@@ -1,7 +1,9 @@
 <template>
   <div class="book-card">
     <div class="book-img">
-      <img :src="getImgUrl(bookInfo.img)" alt="">
+      <img
+        :src="getImgUrl(bookInfo.img)"
+        :alt="bookInfo.img">
       <div class="card-menu">
         <a 
           v-for="(bookMenuOption, index) in bookMenuOptions"

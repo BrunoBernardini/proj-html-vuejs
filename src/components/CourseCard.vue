@@ -1,6 +1,8 @@
 <template>
   <div class="course-card">
-    <img :src="getImgUrl(courseInfo.img)" alt="">
+    <img
+      :src="getImgUrl(courseInfo.img)"
+      :alt="courseInfo.img">
     <div class="text-box">
       <h3 class="highlight">${{Math.floor(courseInfo.price)}}.<span class="cents">{{cents}}</span></h3>
       <h2>{{courseInfo.title}}</h2>

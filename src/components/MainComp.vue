@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container">
+    <section class="container">
       <ul class="cool-data">
         <li
           v-for="(singleCoolData, index) in mainInfo.coolData"
@@ -62,7 +62,20 @@
             :bookMenuOptions="mainInfo.booksInfo.bookMenuOptions"/>
         </div>
       </section>
-    </div>
+
+      <section class="partners">
+        <a
+          v-for="(partner, index) in mainInfo.partnersInfo"
+          :key="`partner-${index}`"
+          :href="partner.href">
+          <img
+            :src="getImgUrl(partner.img)"
+            :alt="partner.img">
+        </a>
+      </section>
+    </section>
+
+    <StoriesComp :storiesInfo="mainInfo.storiesInfo"/>
   </main>
 </template>
 
@@ -71,6 +84,7 @@ import YoutubeVideoSection from './YoutubeVideoSection.vue';
 import CourseCard from './CourseCard.vue';
 import ButtonComp from './ButtonComp.vue';
 import BookCard from './BookCard.vue';
+import StoriesComp from './StoriesComp.vue';
 export default {
   name: "MainComp",
   props: {
@@ -80,8 +94,14 @@ export default {
     YoutubeVideoSection,
     CourseCard,
     ButtonComp,
-    BookCard
-}
+    BookCard,
+    StoriesComp
+  },
+  methods: {
+    getImgUrl(img){
+      return require("../assets/img/"+img);
+    }
+  }
 }
 </script>
 
@@ -174,6 +194,7 @@ main{
   .books{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 153px;
     .text-box{
       width: 310px;
       .upper-text{
@@ -207,6 +228,13 @@ main{
       flex-wrap: wrap;
       gap: 30px;
     }
+  }
+  .partners{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(55%) saturate(295%) hue-rotate(140deg) brightness(93%) contrast(84%);
+    margin-bottom: 150px;
   }
 }
 </style>

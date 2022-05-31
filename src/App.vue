@@ -212,7 +212,59 @@ export default {
               href: "#"
             }
           ],
-        }
+        },
+        partnersInfo: [
+          {
+            img: "client-logo-05-primary.png",
+            href: "#"
+          },
+          {
+            img: "client-logo-06-primary.png",
+            href: "#"
+          },
+          {
+            img: "client-logo-07-primary.png",
+            href: "#"
+          },
+          {
+            img: "client-logo-04-primary.png",
+            href: "#"
+          },
+          {
+            img: "client-logo-03-primary.png",
+            href: "#"
+          },
+          {
+            img: "client-logo-02-primary.png",
+            href: "#"
+          }
+        ],
+        storiesInfo: [
+          {
+            story: "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.",
+            avatar: "testimonial-avata-02.jpg",
+            name: "Mina Hollace",
+            job: "/ Freelancer"
+          },
+          {
+            story: "It has been an incredibly amazing experience! I could learn a lot of new things that changed my life forever, now I'm much more satisfied than before.",
+            avatar: "testimonial-avata-01.jpg",
+            name: "Hed Sciran",
+            job: "/ Manager"
+          },
+          {
+            story: "This has been exactly all I wanted, couldn't ask anything better. I'do re-do it again immediately!",
+            avatar: "testimonial-avata-03.jpg",
+            name: "Steven Job",
+            job: "/ Employee"
+          },
+          {
+            story: "Vi prego liberatemi non volevo fare una recensione positiva e loro mi hanno imprigionato!! E' una trappola, aiutoooo!",
+            avatar: "testimonial-avata-04.jpg",
+            name: "Franco Franchi",
+            job: "/ Schiavo"
+          },
+        ]
       }
     }
   }
