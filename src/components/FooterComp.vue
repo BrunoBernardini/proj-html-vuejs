@@ -34,6 +34,7 @@
         </div>
       </div>
     </section>
+    <span class="under-footer">&copy; 2020 Maxcoach. All rights Reserved</span>
   </footer>
 </template>
 
@@ -48,11 +49,12 @@ export default {
 
 <style lang="scss" scoped>
 footer{
+  min-height: 405px;
   background-color: #171520;
   .content{
     display: flex;
-    min-height: 405px;
     padding-top: 66px;
+    margin-bottom: 70px;
     .left-half,
     .right-half{
       width: 50%;
@@ -83,6 +85,13 @@ footer{
       font-size: 24px;
       margin-right: 31px;
     }
+  }
+  .under-footer{
+    color: #bbbcbd;
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    text-align: center;
   }
 }
 </style>
